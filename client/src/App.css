@@ -1,0 +1,12 @@
+.navbar-brand{
+color: white;}
+.navbar{
+  height: 10vh;
+}
+.img-fluid{
+  width: 3rem;
+  height: 3rem;
+}
+.card-form{
+  padding: 2% 25%;
+}

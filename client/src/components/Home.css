@@ -1,0 +1,90 @@
+.home {
+    background-image: url("https://video-images.vice.com/articles/61770116a3fc4a009396c6cc/lede/1635260147445-img6295.jpeg?crop=1xw:1xh;center,center");
+    background-size: cover;
+    height: 80vh;
+}
+
+.transbox {
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(15, 15, 15));
+    height: 80vh;
+
+}
+
+.text-home h1 {
+    color: #ffffff;
+    font-size: 50px;
+}
+
+.text-home p {
+    color: #ffffff;
+
+}
+
+.text-home {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 8% 2%;
+}
+
+.navbarlinks {
+    padding-top: 2%;
+    width: 55vw !important;
+    color: rgb(233, 211, 13) !important;
+}
+
+.nav-link {
+    font-size: large;
+    font-weight: bolder;
+}
+
+.upcoming{
+    padding: 2% 2%;
+}
+.live{
+    padding: 2% 2%;
+
+}
+.online{
+    padding: 2% 2%;
+ 
+}
+.card{
+    margin-top: 1rem;
+}
+.gradient-custom-2 {
+    /* fallback for old browsers  */
+    background: #2173e5;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #2173e5, #0c84f4, #108ce4, #0a7cb1);
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #2173e5, #04609d, #0976a8, #0778b9);
+    }
+    
+    @media (min-width: 768px) {
+    .gradient-form {
+    height: 100vh !important;
+    }
+    }
+    @media (min-width: 769px) {
+    .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    }
+    }
+    .cascading-right {
+        margin-right: -50px;
+      }
+  
+      @media (max-width: 991.98px) {
+        .cascading-right {
+          margin-right: 0;
+        }
+      }
+      .link-info{
+        color: #2173e5;
+      }
+
+
