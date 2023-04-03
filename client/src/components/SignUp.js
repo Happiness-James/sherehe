@@ -1,18 +1,12 @@
 import { React, useState } from "react";
 import { useNavigate } from 'react-router-dom';
-
-
-
 function SignUp() {
-
 
     const [formData, setFormData] = useState({
         first_name: "",
         last_name: "",
         email: "",
         password: "",
-
-
     })
 
     function handleChange(e) {
@@ -24,7 +18,6 @@ function SignUp() {
     }
     const navigate = useNavigate();
 
-
     function handleSubmit(e) {
         console.log(formData)
         e.preventDefault()
@@ -35,16 +28,12 @@ function SignUp() {
             },
             body: JSON.stringify(formData)
         }).then((resp) => console.log(resp.json))
-        .then(() => navigate('/create'))
-        
+            .then(() => navigate('/create'))
     }
-
 
     return (
         <>
             <section className="text-center text-lg-start">
-
-
                 <div className="container py-4">
                     <div className="row g-0 align-items-center">
                         <div className="col-lg-6 mb-5 mb-lg-0">
@@ -57,9 +46,9 @@ function SignUp() {
                                     <form onSubmit={handleSubmit}>
                                         {/* <!-- 2 column grid layout with text inputs for the first and last names --> */}
                                         <div className="row">
-                                                <div className="form-outline mb-4">
-                                                    <input onChange={handleChange} className="form-control" placeholder="username" type="text" name="username" value={formData.username}></input><br /><br />
-                                                </div>
+                                            <div className="form-outline mb-4">
+                                                <input onChange={handleChange} className="form-control" placeholder="username" type="text" name="username" value={formData.username}></input><br /><br />
+                                            </div>
 
                                         </div>
 
@@ -70,7 +59,7 @@ function SignUp() {
 
                                         {/* <!-- Password input --> */}
                                         <div className="form-outline mb-4">
-                                            <input onChange={handleChange} className="form-control" placeholder="password" type="text" name="password" value={formData.password}></input><br /><br />
+                                            <input onChange={handleChange} className="form-control" placeholder="password" type="password" name="password" value={formData.password}></input><br /><br />
                                         </div>
 
                                         {/* <!-- Submit button --> */}

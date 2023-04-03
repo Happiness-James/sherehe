@@ -4,8 +4,7 @@ class SessionController < ApplicationController
     def create
         user = User.find_by(username: params[:username], password: params[:password])
     
-        if user
-            session[:user_id]=user.id 
+        if user 
             render json: user
         else 
             render status: :unauthorized
@@ -13,7 +12,8 @@ class SessionController < ApplicationController
     end
 
     def destroy
-        session.delete(:user_id)
+        user = User.find_by(username: params[:username], password: params[:password])
+        user.destroy
         head :no_content
     end
 end

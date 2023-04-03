@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     end
 
     def show 
-        user = User.find_by(id: session[:user_id])
+        user = User.find_by(id: params[:user_id])
         if user
             render json: user
         else
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
     private
     
     def user_params
-      params.permit(:username, :email, :password)
+      params.permit(:id, :username, :email, :password)
     end
     def render_not_found_response
         render json: { error: "Event not found" }, status: :not_found

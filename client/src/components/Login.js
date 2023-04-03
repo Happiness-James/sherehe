@@ -4,7 +4,7 @@ import { useState } from "react";
 
 
 
-function Login({ onLogin }) {
+function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
@@ -19,25 +19,19 @@ function Login({ onLogin }) {
             },
             body: JSON.stringify({ username, password }),
         }).then((r) => {
-            console.log('Helllo', r)
+            console.log(r)
             if (r.ok) {
-                r.json().then((user) => onLogin(user));
-                navigate('/create')
+                r.json().then((user) => {
+                    navigate('/create', { state: { userId: user.id } })
+                });
+
             }
-            else{
+            else {
                 alert("Invalid credentials")
             }
         })
-        
+
     }
-
-
-    // function handleSubmitLog() {
-    //     console.log('Navigate')
-    //     navigate('/create')
-
-    // }
-
 
     return (
         <>
